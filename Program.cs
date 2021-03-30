@@ -30,7 +30,7 @@ namespace TaskBlock2
                         break;
                     case "2":
                         Console.WriteLine($"Select all employees");
-                        //Select "PersonsList" for itemize
+                                                           //Select "PersonsList" for itemize
                         PersonAttribute.SelectAllEmployees(PersonsList); //Use "PersonAttribute" for itemize
                         break;
                     case "3":
@@ -42,7 +42,7 @@ namespace TaskBlock2
                         break;
                     case "4":
                         Console.WriteLine("Select user by department");
-                        /*Employee.SelectDepartment();*/
+/*                        PersonsList.Sort(PersonAttribute.SelectDepartment());*/
                         break;
                     case "5":
                         Console.WriteLine("Select user by name");
@@ -85,43 +85,44 @@ namespace TaskBlock2
             return Employee;
         }
 
-        //List                List Name
+                                                //List                List Name
         public static void SelectAllEmployees(List<PersonAttribute> PersonsList) //Transfer method from up 
         {
             foreach (var items in PersonsList)
             {
-                Console.WriteLine($"{items.Name}, {items.Age}"); //Use string for itemize "items" in list
+                Console.WriteLine($"{items.Name}, {items.Department}, {items.Age}, {items.Salary}"); //Use string for itemize "items" in list
             }
         }
-    }
 
+/*        public static void SelectDepartment(List<PersonAttribute> PersonsList)
+        {
+            foreach (var item in PersonsList)
+            {
+                Console.WriteLine(PersonsList.sort());
+            }
+        }*/
 
-    /*
-   public void SelectDepartment()
-    {
-
-    }
-        public void OptionList()
+/*        public void OptionList()
         {
             string selection = Console.ReadLine();
             switch (selection)
             {
                 case "1":
-                    double MaxSalary = Math.Max(salary1, Math.Max(salary2, salary3));
+                    string MaxSalary = Math.Max(Salary);
                     Console.WriteLine($"Max salary is");
                     break;
                 case "2":
-                    double MinSalary = Math.Min(salary1, Math.Min(salary2, salary3));
+                    double MinSalary = Math.Min(Salary);
                     Console.WriteLine($"Max salary is");
                     break;
                 case "3":
-                    int AvarageAge = (age1 + age2 + age3) / 3;
+                    int AvarageAge = (Age);
                     Console.WriteLine($"average age of employees is");
                     break;
                 default:
                     Console.WriteLine("You enter incorrect value");
                     break;
             }
-        }
-*/
+        }*/
+    }
 }
