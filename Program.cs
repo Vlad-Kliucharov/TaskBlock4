@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-
+using System.Linq;
 
 namespace TaskBlock2
 {
@@ -18,7 +18,7 @@ namespace TaskBlock2
                 Console.WriteLine("Select the action (the value):");
                 Console.WriteLine("1 - Add new employee");
                 Console.WriteLine("2 - Select all employees");
-                Console.WriteLine("3 - Select one parametr from list");
+                Console.WriteLine("3 - Select parametrs from list (Max and Min salary, avarage age of employees )");
                 Console.WriteLine("4 - Select user by department");
                 Console.WriteLine("5 - Select user by name");
                 string SelectAction = Console.ReadLine();
@@ -34,19 +34,19 @@ namespace TaskBlock2
                         PersonAttribute.SelectAllEmployees(PersonsList); //Use "PersonAttribute" for itemize
                         break;
                     case "3":
-                        Console.WriteLine("Select one parametr from list:");
+                        Console.WriteLine("Select one parametr from list: ");
                         Console.WriteLine("Parametr 1 is max salary");
                         Console.WriteLine("Parametr 2 is min salary");
                         Console.WriteLine("Parametr 3 is average age of employees");
-
+                        PersonAttribute.OptionList(PersonsList);
                         break;
                     case "4":
                         Console.WriteLine("Select user by department");
-/*                        PersonsList.Sort(PersonAttribute.SelectDepartment());*/
+                        PersonAttribute.SelectDepartment(PersonsList);
                         break;
                     case "5":
                         Console.WriteLine("Select user by name");
-
+                        PersonAttribute.SelectUserByName(PersonsList);
                         break;
                 }
                 Console.WriteLine("For ending the program enter the 'end', for continuing press 'enter'");
@@ -63,8 +63,8 @@ namespace TaskBlock2
     class PersonAttribute
     {
         public string Name;
-        public string Age;
-        public string Salary;
+        public double Age;
+        public double Salary;
         public string Department;
 
 
@@ -76,9 +76,9 @@ namespace TaskBlock2
             Console.WriteLine($"Enter Employees name: ");
             Employee.Name = Console.ReadLine();
             Console.WriteLine($"Enter Employees Age: ");
-            Employee.Age = Console.ReadLine();
+            Employee.Age = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine($"Enter Employees Salary: ");
-            Employee.Salary = Console.ReadLine();
+            Employee.Salary = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine($"Enter Employees Department: ");
             Employee.Department = Console.ReadLine();
 
@@ -90,39 +90,43 @@ namespace TaskBlock2
         {
             foreach (var items in PersonsList)
             {
-                Console.WriteLine($"{items.Name}, {items.Department}, {items.Age}, {items.Salary}"); //Use string for itemize "items" in list
+                Console.WriteLine($"Name : {items.Name}, Department : {items.Department}, Age : {items.Age}, Salary : {items.Salary}"); //Use string for itemize "items" in list
             }
         }
-
-/*        public static void SelectDepartment(List<PersonAttribute> PersonsList)
-        {
-            foreach (var item in PersonsList)
-            {
-                Console.WriteLine(PersonsList.sort());
-            }
-        }*/
-
-/*        public void OptionList()
+        public static void OptionList(List<PersonAttribute> PersonsList)
         {
             string selection = Console.ReadLine();
             switch (selection)
             {
                 case "1":
-                    string MaxSalary = Math.Max(Salary);
-                    Console.WriteLine($"Max salary is");
+                    double MaxSalary = PersonsList.Max(s => s.Salary);
+                    Console.WriteLine($"Max salary is {MaxSalary}");
                     break;
                 case "2":
-                    double MinSalary = Math.Min(Salary);
-                    Console.WriteLine($"Max salary is");
+                    double MinSalary = PersonsList.Min(s => s.Salary);
+                    Console.WriteLine($"Mix salary is {MinSalary}");
                     break;
                 case "3":
-                    int AvarageAge = (Age);
-                    Console.WriteLine($"average age of employees is");
+                    double AvarageAge = PersonsList.Average(a => a.Age);
+                    Console.WriteLine($"An average age of employees is {AvarageAge}");
                     break;
                 default:
                     Console.WriteLine("You enter incorrect value");
                     break;
             }
-        }*/
+        }
+        public static void SelectDepartment(List<PersonAttribute> PersonsList)
+        {
+            //List name  OrderBy(LINQ)           convert to list 
+            PersonsList.OrderBy(i => i.Department).ToList().ForEach(y => Console.WriteLine($"Departmnet : {y.Department}"));
+
+        }
+
+        public static void SelectUserByName(List<PersonAttribute> PersonsList)
+        {
+            //List name  OrderBy(LINQ)           convert to list 
+            PersonsList.OrderBy(i => i.Name).ToList().ForEach(y => Console.WriteLine($"Name : {y.Name}"));
+
+        }
     }
 }
