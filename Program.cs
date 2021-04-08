@@ -18,7 +18,7 @@ namespace TaskBlock2
                 Console.WriteLine("Select the action (the value):");
                 Console.WriteLine("1 - Add new employee");
                 Console.WriteLine("2 - Select all employees");
-                Console.WriteLine("3 - Select parametrs from list (Max and Min salary, avarage age of employees )");
+                Console.WriteLine("3 - Select user by parametr from list (Max and Min salary, avarage age of employees )");
                 Console.WriteLine("4 - Select user by department");
                 Console.WriteLine("5 - Select user by name");
                 string SelectAction = Console.ReadLine();
@@ -29,7 +29,7 @@ namespace TaskBlock2
                         PersonsList.Add(PersonAttribute.AddEmployees());
                         break;
                     case "2":
-                        Console.WriteLine($"Select all employees");
+                        Console.WriteLine($"Employees list");
                                                            //Select "PersonsList" for itemize
                         PersonAttribute.SelectAllEmployees(PersonsList); //Use "PersonAttribute" for itemize
                         break;
@@ -41,11 +41,9 @@ namespace TaskBlock2
                         PersonAttribute.OptionList(PersonsList);
                         break;
                     case "4":
-                        Console.WriteLine("Select user by department");
                         PersonAttribute.SelectDepartment(PersonsList);
                         break;
                     case "5":
-                        Console.WriteLine("Select user by name");
                         PersonAttribute.SelectUserByName(PersonsList);
                         break;
                 }
@@ -115,17 +113,30 @@ namespace TaskBlock2
                     break;
             }
         }
-        public static void SelectDepartment(List<PersonAttribute> PersonsList)
+/*        public static void SelectDepartment(List<PersonAttribute> PersonsList)
         {
             //List name  OrderBy(LINQ)           convert to list 
             PersonsList.OrderBy(i => i.Department).ToList().ForEach(y => Console.WriteLine($"Departmnet : {y.Department}"));
 
+        }*/
+
+        public static void SelectDepartment(List<PersonAttribute> PersonsList)
+        {
+            //List name  OrderBy(LINQ)           convert to list 
+            Console.WriteLine("Enter a department which you wanna find");
+            var departmentName = Console.ReadLine();
+            var selecteDepartment = PersonsList.Where(attr => attr.Department.ToLower().Contains(departmentName.ToLower())).ToList();
+            selecteDepartment.ForEach(department => Console.WriteLine($"Department : {department.Department}, Name : {department.Name}"));
+            
         }
 
         public static void SelectUserByName(List<PersonAttribute> PersonsList)
         {
             //List name  OrderBy(LINQ)           convert to list 
-            PersonsList.OrderBy(i => i.Name).ToList().ForEach(y => Console.WriteLine($"Name : {y.Name}"));
+            Console.WriteLine("Enter a name for the user which you wanna find");
+            var userName = Console.ReadLine();
+            var selectedUsers = PersonsList.Where(attr => attr.Name.ToLower().Contains(userName.ToLower())).ToList();
+            selectedUsers.ForEach(user => Console.WriteLine($"Name: { user.Name}, Department: { user.Department}, Age: { user.Age}, Salary: { user.Salary}"));
 
         }
     }
