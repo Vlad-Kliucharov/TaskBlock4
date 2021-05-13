@@ -11,7 +11,7 @@ namespace TaskBlock2
         public double Age;
         public double Salary;
         public string Department;
-
+        public double Hours;
 
         public static Employees AddEmployees()
         {
@@ -52,6 +52,20 @@ namespace TaskBlock2
            
             Console.WriteLine($"Enter Employees Department: ");
             Employee.Department = Console.ReadLine();
+
+            while(Employee.Salary != Double.NaN)
+            {
+                try
+                {
+                    Console.WriteLine($"Enter employees work hours: ");
+                    Employee.Hours = Convert.ToDouble(Console.ReadLine());
+                    break;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine($"You entered not a NAN value, try again");
+                }
+            }
 
             return Employee;
         }

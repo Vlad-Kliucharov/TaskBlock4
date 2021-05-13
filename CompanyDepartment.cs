@@ -17,6 +17,17 @@ namespace TaskBlock2
 
         }
 
+        public static void SelectWorkHour(List<Employees> PersonsList)
+        {
+            Console.WriteLine("For showing employee hours enter employyes name");
+            var userName = Console.ReadLine();
+            var selectUser = PersonsList.Where(attr => attr.Name.ToLower().Contains(userName.ToLower())).ToList();
+            selectUser.ForEach(userName => Console.WriteLine($"User "));
+
+        }
+
+
+
         /*        public static void SelectDepartment(List<PersonAttribute> PersonsList)
         {
             //List name  OrderBy(LINQ)             convert to list for using foreach

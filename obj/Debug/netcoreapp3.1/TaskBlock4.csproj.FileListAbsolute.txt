@@ -1,0 +1,12 @@
+C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.AssemblyInfoInputs.cache
+C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.AssemblyInfo.cs
+C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.csproj.CoreCompileInputs.cache
+C:\Users\vkliucharov\source\repos\TaskBlock4\bin\Debug\netcoreapp3.1\TaskBlock4.exe
+C:\Users\vkliucharov\source\repos\TaskBlock4\bin\Debug\netcoreapp3.1\TaskBlock4.deps.json
+C:\Users\vkliucharov\source\repos\TaskBlock4\bin\Debug\netcoreapp3.1\TaskBlock4.runtimeconfig.json
+C:\Users\vkliucharov\source\repos\TaskBlock4\bin\Debug\netcoreapp3.1\TaskBlock4.runtimeconfig.dev.json
+C:\Users\vkliucharov\source\repos\TaskBlock4\bin\Debug\netcoreapp3.1\TaskBlock4.dll
+C:\Users\vkliucharov\source\repos\TaskBlock4\bin\Debug\netcoreapp3.1\TaskBlock4.pdb
+C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.dll
+C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.pdb
+C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.genruntimeconfig.cache
