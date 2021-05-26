@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TaskBlock3
+namespace TaskBlock4
 {
-    class Boss
+    class Boss : Person
     {
+        Person boss = new Boss();
     }
 }

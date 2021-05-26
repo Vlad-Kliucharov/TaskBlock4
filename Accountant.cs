@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TaskBlock3
+namespace TaskBlock4
 {
-    class Accountant
+    class Accountant : Person
     {
 
     }

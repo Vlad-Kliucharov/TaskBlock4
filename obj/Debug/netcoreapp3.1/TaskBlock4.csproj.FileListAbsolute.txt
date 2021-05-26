@@ -10,3 +10,4 @@ C:\Users\vkliucharov\source\repos\TaskBlock4\bin\Debug\netcoreapp3.1\TaskBlock4.
 C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.dll
 C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.pdb
 C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.genruntimeconfig.cache
+C:\Users\vkliucharov\source\repos\TaskBlock4\obj\Debug\netcoreapp3.1\TaskBlock4.csprojAssemblyReference.cache

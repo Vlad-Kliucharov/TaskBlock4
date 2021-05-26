@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TaskBlock2
+namespace TaskBlock4
 {
     public class CompanyDepartment : Employees
     {   public static void SelectDepartment(List<Employees> PersonsList)
@@ -17,16 +17,21 @@ namespace TaskBlock2
 
         }
 
-        public static void SelectWorkHour(List<Employees> PersonsList)
+        public static void SelectEmployeesWorkHour(List<Employees> PersonsList)
         {
-            Console.WriteLine("For showing employee hours enter employyes name");
-            var userName = Console.ReadLine();
-            var selectUser = PersonsList.Where(attr => attr.Name.ToLower().Contains(userName.ToLower())).ToList();
-            selectUser.ForEach(userName => Console.WriteLine($"User "));
+            if (PersonsList.Count == 0)
+            {
+                Console.WriteLine("The list is empty add at least one user");
+            }
+            else
+            {
+                foreach (var items in PersonsList)
+                {
+                    Console.WriteLine($"Name : {items.Name}, Work Hours : {items.Hours}"); //Use string for itemize "items" in list
+                }
+            }
 
         }
-
-
 
         /*        public static void SelectDepartment(List<PersonAttribute> PersonsList)
         {

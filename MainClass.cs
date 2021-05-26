@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TaskBlock2
+namespace TaskBlock4
 {
     public class MainClass : CompanyDepartment
     {
@@ -20,7 +20,7 @@ namespace TaskBlock2
                 Console.WriteLine("3 - Select user by parametr from list (Max and Min salary, avarage age of employees )");
                 Console.WriteLine("4 - Select user by department");
                 Console.WriteLine("5 - Select user by name");
-                Console.WriteLine("6 - Select usser work hours");
+                Console.WriteLine("6 - Select user work hours");
                 string SelectAction = Console.ReadLine();
                 switch (SelectAction)
                 {
@@ -47,7 +47,10 @@ namespace TaskBlock2
                         Employees.SelectUserByName(PersonsList);
                         break;
                     case "6":
-                        CompanyDepartment.SelectWorkHour(PersonsList);
+                        CompanyDepartment.SelectEmployeesWorkHour(PersonsList);
+                        break;
+                    case "7":
+                        
                         break;
                 }
                 Console.WriteLine("For ending the program enter the 'end', for continuing press 'enter'");

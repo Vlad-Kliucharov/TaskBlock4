@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vkliucharov\\source\\repos\\TaskBlock3\\TaskBlock3.csproj",
-      "projectName": "TaskBlock3",
-      "projectPath": "C:\\Users\\vkliucharov\\source\\repos\\TaskBlock3\\TaskBlock3.csproj",
+      "projectUniqueName": "C:\\Users\\vkliucharov\\source\\repos\\TaskBlock4\\TaskBlock4.csproj",
+      "projectName": "TaskBlock4",
+      "projectPath": "C:\\Users\\vkliucharov\\source\\repos\\TaskBlock4\\TaskBlock4.csproj",
       "packagesPath": "C:\\Users\\vkliucharov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vkliucharov\\source\\repos\\TaskBlock3\\obj\\",
+      "outputPath": "C:\\Users\\vkliucharov\\source\\repos\\TaskBlock4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vkliucharov\\AppData\\Roaming\\NuGet\\NuGet.Config",

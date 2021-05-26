@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TaskBlock2
+namespace TaskBlock4
 {
     public class Employees : EmploeesList
     {
-        public string Name;
-        public double Age;
-        public double Salary;
-        public string Department;
-        public double Hours;
 
         public static Employees AddEmployees()
         {
