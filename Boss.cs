@@ -7,5 +7,6 @@ namespace TaskBlock4
     class Boss : Person
     {
         Person boss = new Boss();
+        
     }
 }

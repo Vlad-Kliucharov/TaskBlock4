@@ -6,10 +6,12 @@ using System.Text;
 namespace TaskBlock4
 {
     public class CompanyDepartment : Employees
-    {   public static void SelectDepartment(List<Employees> PersonsList)
+    {
+        public static void SelectDepartment(List<Employees> PersonsList)
         {
             Console.WriteLine("Enter a department which you wanna find");
             var departmentName = Console.ReadLine();
+
             //List name "Where" selection attribute(LINQ) shifting to lower for any search variants contains value in list  convert to list for using foreach
             var selecteDepartment = PersonsList.Where(attr => attr.Department.ToLower().Contains(departmentName.ToLower())).ToList();
             //Loop for selecting from list
@@ -33,6 +35,10 @@ namespace TaskBlock4
 
         }
 
+        public static void AddSalary(List<Employees> personsList)
+        {
+
+        }
         /*        public static void SelectDepartment(List<PersonAttribute> PersonsList)
         {
             //List name  OrderBy(LINQ)             convert to list for using foreach

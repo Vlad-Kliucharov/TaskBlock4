@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 
 namespace TaskBlock4
 {
     public class Employees : EmploeesList
     {
-
         public static Employees AddEmployees()
         {
 
             Employees Employee = new Employees(); //Creation of new object "Employee"
-
 
             Console.WriteLine($"Enter Employees name: ");
             Employee.Name = Console.ReadLine();
@@ -44,11 +42,33 @@ namespace TaskBlock4
                     Console.WriteLine($"You entered not a NAN value, try again");
                 }
             }
-           
-            Console.WriteLine($"Enter Employees Department: ");
-            Employee.Department = Console.ReadLine();
 
-            while(Employee.Salary != Double.NaN)
+            Console.WriteLine($"Enter Employees Department from list: 1-Eployee, 2-Accontant, 3-Boss");
+            Employee.Department = Console.ReadLine();
+            string[] DepartmentName = { "Employee", "Accontant", "Boss" };
+
+            //Employee.Department = DepartmentName[Convert.ToInt32(Employee.Department) - 1];
+
+            foreach (var item in DepartmentName)
+            {
+                switch (Employee.Department)
+                {
+                    case "1":
+                        Console.WriteLine("Employee department");
+                        Employee.Department = DepartmentName[0];
+                        break;
+                    case "2":
+                        Console.WriteLine("Accountant department");
+                        Employee.Department = DepartmentName[1];
+                        break;
+                    case "3":
+                        Console.WriteLine("Boss department");
+                        Employee.Department = DepartmentName[2];
+                        break;
+                }
+            }
+
+            while (Employee.Salary != Double.NaN)
             {
                 try
                 {

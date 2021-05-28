@@ -50,7 +50,9 @@ namespace TaskBlock4
                         CompanyDepartment.SelectEmployeesWorkHour(PersonsList);
                         break;
                     case "7":
-                        
+                        break;
+                    case "8":
+                        CompanyDepartment.AddSalary(PersonsList);
                         break;
                 }
                 Console.WriteLine("For ending the program enter the 'end', for continuing press 'enter'");
