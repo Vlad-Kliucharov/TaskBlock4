@@ -6,10 +6,16 @@ namespace TaskBlock4
 {
     public abstract class Person
     {
-        public string Name {get; set;}
+        public Person(SalaryRate rate)
+        {
+            Rate = rate;
+        }
+        protected SalaryRate Rate { get; set; }
+        public string Name { get; set; }
         public double Age { get; set; }
-        public double Salary { get; set; }
-        public string Department { get; set; }
         public double Hours { get; set; }
+        public abstract string Department { get; }
+        public abstract double hoursRateEployee { get; }
+        public double Salary => hoursRateEployee * Hours;
     }
 }

@@ -6,7 +6,9 @@ namespace TaskBlock4
 {
     class Boss : Person
     {
-        Person boss = new Boss();
-        
+        public Boss(SalaryRate rate) : base(rate) { }
+        public override double hoursRateEployee => Rate.BossRate;
+
+        public override string Department => "Boss";
     }
 }
